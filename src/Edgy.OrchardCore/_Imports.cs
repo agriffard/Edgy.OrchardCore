@@ -1,0 +1,15 @@
+global using Microsoft.Extensions.Logging;
+global using OrchardCore;
+global using OrchardCore.ContentManagement;
+//global using Edgy.Core.Configuration;
+//global using Edgy.Core.Constants;
+//global using Edgy.Core.Entities;
+//global using Edgy.Core.Extensions;
+//global using Edgy.Core.Interfaces.Business;
+global using Edgy.OrchardCore.Services;
+global using Edgy.OrchardCore.Models;
+global using OrchardCore.Alias.Models;
+//global using OrchardCore.ContentManagement;
+global using OrchardCore.Html.Models;
+global using OrchardCore.Menu.Models;
+global using OrchardCore.Seo.Models;

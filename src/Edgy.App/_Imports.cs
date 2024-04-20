@@ -1,0 +1,10 @@
+global using Microsoft.AspNetCore.Mvc.RazorPages;
+global using Microsoft.Extensions.Options;
+global using OrchardCore;
+global using Edgy.Core.Configuration;
+//global using Edgy.Core.Constants;
+global using Edgy.Core.Extensions;
+//global using Edgy.Core.Entities;
+//global using Edgy.Core.Interfaces.Business;
+global using Edgy.OrchardCore.Models;
+global using Edgy.OrchardCore.Services;

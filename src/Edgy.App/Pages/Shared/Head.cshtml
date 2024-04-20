@@ -1,0 +1,14 @@
+@model AppSettings
+@{
+    var app = Model;
+    var title = $"{ViewData["Title"]} - {app.Name}";
+    var keywords = ViewData["Keywords"];
+    var description = ViewData["Description"];
+}
+<meta charset="utf-8" />
+<meta name="author" content="@app.Author">
+<meta name="keywords" content="@ViewData["Keywords"]" />
+<meta name="description" content="@ViewData["Description"]">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+@* <link rel="stylesheet" href="~/Edgy.App.styles.css" /> *@
+<title>@title</title>

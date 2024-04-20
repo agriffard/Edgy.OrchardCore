@@ -1,0 +1,17 @@
+@page "/a/{alias}"
+@inject ContentService _contentService;
+@{
+    var Model = await _contentService.GetPageByAliasAsync(Alias);
+    
+    if (Model != null)
+    {
+        ViewData["Title"] = Model.Title;
+    }
+}
+@Html.Raw(Model.Html)
+
+@functions
+{
+    [FromRoute]
+    public string Alias { get; set; }
+}

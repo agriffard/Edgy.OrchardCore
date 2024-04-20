@@ -1,0 +1,19 @@
+@inject IOptions<AppSettings> AppSettings
+@{
+    var app = AppSettings.Value;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <partial name="Head" model="app"></partial>
+</head>
+<body>
+    <partial name="Header" model="app"></partial>
+    <main role="main">
+        @RenderBody()
+    </main>
+    <partial name="Footer" model="app"></partial>
+    <partial name="FootScripts" model="app"></partial>
+</body>
+</html>
+<!-- @app.Version -->

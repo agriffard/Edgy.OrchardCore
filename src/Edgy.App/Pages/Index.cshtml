@@ -1,0 +1,13 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = Model.PageContent.Title;
+}
+
+@* @if (Model.ContentItem != null && Model.ContentItem.Content.LiquidPart != null)
+{
+    //var html = (await OrchardHelper.LiquidToHtmlAsync((string)Model.ContentItem.Content.LiquidPart.Liquid)).GetString();
+    @Html.Raw(Model.Html.Body)
+} *@
+
+@Html.Raw(Model.PageContent.Html)

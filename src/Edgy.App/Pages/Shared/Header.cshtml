@@ -1,0 +1,11 @@
+@model AppSettings
+@{
+    var app = Model;
+}
+<header role="banner">
+    <a href="/">@app.Name</a>
+    <nav role="navigation">
+        <partial name="Menu" model="app"></partial>
+    </nav>
+    @* <partial name="MainMenu"></partial> *@
+</header>

@@ -1,0 +1,416 @@
+{
+  "name": "Edgy",
+  "displayName": "Edgy",
+  "description": "Edgy recipe",
+  "author": "AG",
+  "website": "https://github.com/Edgywa/Edgy",
+  "version": "1.0",
+  "issetuprecipe": true,
+  "categories": [],
+  "tags": [],
+  "steps": [
+    {
+      "name": "Feature",
+      "enable": [
+        "Application.Default",
+        "Edgy.App",
+        "OrchardCore.Settings",
+        "OrchardCore.Admin",
+        "OrchardCore.Liquid",
+        "OrchardCore.Contents",
+        "OrchardCore.ContentTypes",
+        "OrchardCore.Shortcodes",
+        "OrchardCore.Html",
+        "OrchardCore.Recipes.Core",
+        "OrchardCore.Title",
+        "OrchardCore.Templates",
+        "OrchardCore.Alias",
+        "OrchardCore.Autoroute",
+        "OrchardCore.Scripting",
+        "OrchardCore.Recipes",
+        "OrchardCore.ContentFields",
+        "OrchardCore.Roles.Core",
+        "OrchardCore.Users",
+        "OrchardCore.ContentPreview",
+        "OrchardCore.Deployment",
+        "OrchardCore.CustomSettings",
+        "OrchardCore.Diagnostics",
+        "OrchardCore.DynamicCache",
+        "OrchardCore.Resources",
+        "OrchardCore.Widgets",
+        "OrchardCore.Features",
+        "OrchardCore.Flows",
+        "OrchardCore.HomeRoute",
+        "OrchardCore.Indexing",
+        "OrchardCore.Lists",
+        "OrchardCore.Markdown",
+        "OrchardCore.Media",
+        "OrchardCore.Menu",
+        "OrchardCore.Navigation",
+        "OrchardCore.Queries",
+        "OrchardCore.Queries.Sql",
+        "OrchardCore.Roles",
+        "OrchardCore.Security",
+        "OrchardCore.Seo",
+        "OrchardCore.Shortcodes.Templates",
+        "OrchardCore.Themes",
+        "TheAdmin"
+      ]
+    },
+    {
+      "name": "Themes",
+      "Site": null,
+      "Admin": "TheAdmin"
+    },
+    {
+      "name": "ContentDefinition",
+      "ContentTypes": [
+        {
+          "Name": "Page",
+          "DisplayName": "Page",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Creatable": true,
+              "Listable": true,
+              "Draftable": true,
+              "Versionable": true,
+              "Securable": true
+            },
+            "FullTextAspectSettings": {}
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Page",
+              "Name": "Page",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "4"
+                }
+              }
+            },
+            {
+              "PartName": "AliasPart",
+              "Name": "AliasPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "PartName": "LiquidPart",
+              "Name": "LiquidPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "2"
+                }
+              }
+            },
+            {
+              "PartName": "SeoMetaPart",
+              "Name": "SeoMetaPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "3"
+                },
+                "SeoMetaPartSettings": {
+                  "DisplayKeywords": true
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Content",
+      "data": [
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentType": "Menu",
+          "DisplayText": "Menu",
+          "Latest": false,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "TitlePart": {
+            "Title": "Menu"
+          },
+          "AliasPart": {
+            "Alias": "main-menu"
+          },
+          "MenuPart": {},
+          "MenuItemsListPart": {
+            "MenuItems": [
+              {
+                "ContentItemId": "4431g5r50dfab1tkvjp9jhd5me",
+                "ContentItemVersionId": null,
+                "ContentType": "LinkMenuItem",
+                "DisplayText": "Home",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-04-04T14:18:54.3215892Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "LinkMenuItemPart": {
+                  "Name": "Home",
+                  "Url": "~/"
+                },
+                "LinkMenuItem": {}
+              }
+            ]
+          },
+          "@WeldedPartSettings": {
+            "MenuPart": {
+              "Position": "3"
+            },
+            "MenuItemsListPart": {
+              "Position": "4"
+            }
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentType": "Page",
+          "DisplayText": "About",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "Page": {},
+          "AliasPart": {
+            "Alias": "about"
+          },
+          "TitlePart": {
+            "Title": "About"
+          },
+          "LiquidPart": {
+            "Liquid": "<section id=\"about\">\r\n  <header>\r\n    <h1>About</h2>\r\n  </header>\r\n</section>"
+          },
+          "SeoMetaPart": {
+            "PageTitle": null,
+            "Render": true,
+            "MetaDescription": "Desc",
+            "MetaKeywords": "Key",
+            "Canonical": null,
+            "MetaRobots": null,
+            "CustomMetaTags": [],
+            "DefaultSocialImage": {
+              "Paths": [],
+              "MediaTexts": []
+            },
+            "OpenGraphImage": {
+              "Paths": [],
+              "MediaTexts": []
+            },
+            "OpenGraphType": null,
+            "OpenGraphTitle": null,
+            "OpenGraphDescription": null,
+            "TwitterImage": {
+              "Paths": [],
+              "MediaTexts": []
+            },
+            "TwitterTitle": null,
+            "TwitterDescription": null,
+            "TwitterCard": null,
+            "TwitterCreator": null,
+            "TwitterSite": null,
+            "GoogleSchema": null
+          }
+        },
+        {
+          "ContentItemId": "[js: uuid()]",
+          "ContentType": "Page",
+          "DisplayText": "Home",
+          "Latest": true,
+          "Published": true,
+          "Owner": "[js: parameters('AdminUserId')]",
+          "Author": "[js: parameters('AdminUsername')]",
+          "Page": {},
+          "AliasPart": {
+            "Alias": "home"
+          },
+          "TitlePart": {
+            "Title": "Home"
+          },
+          "LiquidPart": {
+            "Liquid": "<section id=\"text\">\r\n  <h1>Text</h1>\r\n  <article id=\"text__headings\">\r\n    <h1>Headings</h1>\r\n    <div>\r\n      <h1>Heading 1</h1>\r\n      <h2>Heading 2</h2>\r\n      <h3>Heading 3</h3>\r\n      <h4>Heading 4</h4>\r\n      <h5>Heading 5</h5>\r\n      <h6>Heading 6</h6>\r\n    </div>\r\n    <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n  </article>\r\n  <article id=\"text__paragraphs\">\r\n    <h1>Paragraphs</h1>\r\n    <div>\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra viverra nisl, vel maximus turpis ornare a. Ut scelerisque lectus sed odio dictum scelerisque vitae quis nisi. Nulla facilisi. Phasellus vehicula convallis nisl, id suscipit dui semper at. In eu iaculis lorem. In vehicula sed mauris et suscipit. Vivamus pellentesque non massa sit amet ornare. Integer placerat est vitae nisl molestie, eget rhoncus erat vulputate. Proin ornare massa eget bibendum faucibus.</p>\r\n    </div>\r\n    <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n  </article>\r\n  <article id=\"text__blockquotes\">\r\n    <h1>Blockquotes</h1>\r\n    <div>\r\n      <blockquote>\r\n        <p>Etiam porttitor egestas elit, at venenatis neque accumsan eu. Nulla viverra odio nisi, quis commodo tellus tristique non. Proin ac ante at orci euismod eleifend. Quisque nisi sapien, dapibus in venenatis sit amet, posuere non purus. In sit amet metus erat. Pellentesque nec neque eleifend, luctus ipsum at, ullamcorper nunc. Pellentesque sagittis, dolor eu bibendum lacinia, orci ex bibendum risus, at tincidunt augue lacus eleifend diam. Nulla facilisis velit ut est auctor sollicitudin. Morbi eget lectus a lacus maximus molestie in ut lorem.</p>\r\n        <p>Vestibulum ut erat sapien. Duis eros est, tempus a rutrum eu, rhoncus at ante. Vestibulum congue vel nunc et dapibus. Ut tristique facilisis orci ac pretium. Nunc et sodales turpis. Nulla pretium augue vitae faucibus tempor. Aliquam convallis mollis feugiat. Ut non pellentesque sem. Suspendisse interdum, neque at hendrerit varius, enim neque imperdiet enim, pellentesque efficitur leo orci non erat.</p>\r\n        <cite>Said no one, ever.</cite>\r\n      </blockquote>\r\n    </div>\r\n    <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n  </article>\r\n  <article id=\"text__lists\">\r\n    <h1>Lists</h1>\r\n    <div>\r\n      <h3>Definition list</h3>\r\n      <dl>\r\n        <dt>Definition List Title</dt>\r\n        <dd>This is a definition list division.</dd>\r\n      </dl>\r\n      <h3>Ordered List</h3>\r\n      <ol>\r\n        <li>List Item 1</li>\r\n        <li>List Item 2</li>\r\n        <li>List Item 3\r\n          <ol>\r\n            <li>Nested Ordered List Item 3.1</li>\r\n            <li>Nested Ordered List Item 3.2</li>\r\n            <li>Nested Ordered List Item 3.3</li>\r\n          </ol>\r\n        </li>\r\n        <li>List Item 4\r\n          <ul>\r\n            <li>Nested Unordered List Item 4.1</li>\r\n            <li>Nested Unordered List Item 4.2</li>\r\n            <li>Nested Unordered List Item 4.3</li>\r\n          </ul>\r\n        </li>\r\n      </ol>\r\n      <h3>Unordered List</h3>\r\n      <ul>\r\n        <li>List Item 1</li>\r\n        <li>List Item 2</li>\r\n        <li>List Item 3\r\n          <ol>\r\n            <li>Nested Ordered List Item 3.1</li>\r\n            <li>Nested Ordered List Item 3.2</li>\r\n            <li>Nested Ordered List Item 3.3</li>\r\n          </ol>\r\n        </li>\r\n        <li>List Item 4\r\n          <ul>\r\n            <li>Nested Unordered List Item 4.1</li>\r\n            <li>Nested Unordered List Item 4.2</li>\r\n            <li>Nested Unordered List Item 4.3</li>\r\n          </ul>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n    <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n  </article>\r\n  <article id=\"text__hr\">\r\n    <h1>Horizontal rules</h1>\r\n    <div>\r\n      <hr>\r\n    </div>\r\n    <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n  </article>\r\n  <article id=\"text__tables\">\r\n    <h1>Tabular data</h1>\r\n    <table>\r\n      <caption>Table Caption</caption>\r\n      <thead>\r\n        <tr>\r\n          <th>Table Heading 1</th>\r\n          <th>Table Heading 2</th>\r\n          <th>Table Heading 3</th>\r\n          <th>Table Heading 4</th>\r\n          <th>Table Heading 5</th>\r\n        </tr>\r\n      </thead>\r\n      <tfoot>\r\n        <tr>\r\n          <th>Table Footer 1</th>\r\n          <th>Table Footer 2</th>\r\n          <th>Table Footer 3</th>\r\n          <th>Table Footer 4</th>\r\n          <th>Table Footer 5</th>\r\n        </tr>\r\n      </tfoot>\r\n      <tbody>\r\n        <tr>\r\n          <td>Table Cell 1</td>\r\n          <td>Table Cell 2</td>\r\n          <td>Table Cell 3</td>\r\n          <td>Table Cell 4</td>\r\n          <td>Table Cell 5</td>\r\n        </tr>\r\n        <tr>\r\n          <td>Table Cell 1</td>\r\n          <td>Table Cell 2</td>\r\n          <td>Table Cell 3</td>\r\n          <td>Table Cell 4</td>\r\n          <td>Table Cell 5</td>\r\n        </tr>\r\n        <tr>\r\n          <td>Table Cell 1</td>\r\n          <td>Table Cell 2</td>\r\n          <td>Table Cell 3</td>\r\n          <td>Table Cell 4</td>\r\n          <td>Table Cell 5</td>\r\n        </tr>\r\n        <tr>\r\n          <td>Table Cell 1</td>\r\n          <td>Table Cell 2</td>\r\n          <td>Table Cell 3</td>\r\n          <td>Table Cell 4</td>\r\n          <td>Table Cell 5</td>\r\n        </tr>\r\n      </tbody>\r\n    </table>\r\n    <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n  </article>\r\n  <article id=\"text__code\">\r\n    <h1>Code</h1>\r\n    <div>\r\n      <p><strong>Keyboard input:</strong> <kbd>Cmd</kbd></p>\r\n      <p><strong>Inline code:</strong> <code>&lt;div&gt;code&lt;/div&gt;</code></p>\r\n      <p><strong>Sample output:</strong> <samp>This is sample output from a computer program.</samp></p>\r\n      <h2>Pre-formatted text</h2>\r\n      <pre>  P R E F O R M A T T E D T E X T\r\n  ! \" # $ % &amp; ' ( ) * + , - . /\r\n  0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?\r\n  @ A B C D E F G H I J K L M N O\r\n  P Q R S T U V W X Y Z [ \\ ] ^ _\r\n  ` a b c d e f g h i j k l m n o\r\n  p q r s t u v w x y z { | } ~ </pre>\r\n    </div>\r\n    <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n  </article>\r\n  <article id=\"text__inline\">\r\n    <h1>Inline elements</h1>\r\n    <div>\r\n      <a href=\"#!\">This is a text link</a>.<br>\r\n      <strong>Strong is used to indicate strong importance.</strong><br>\r\n      <em>This text has added emphasis.</em><br>\r\n      The <b>b element</b> is stylistically different text from normal text, without any special importance.<br>\r\n      The <i>i element</i> is text that is offset from the normal text.<br>\r\n      The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual annotation.<br>\r\n      <del>This text is deleted</del> and <ins>This text is inserted</ins>.<br>\r\n      <s>This text has a strikethrough</s>.<br>\r\n      Superscript<sup>®</sup>.<br>\r\n      Subscript for things like H<sub>2</sub>O.<br>\r\n      <small>This small text is small for for fine print, etc.</small><br>\r\n      Abbreviation: <abbr title=\"HyperText Markup Language\">HTML</abbr><br>\r\n      <q cite=\"https://developer.mozilla.org/en-US/docs/HTML/Element/q\">This text is a short inline quotation.</q><br>\r\n      <cite>This is a citation.</cite><br>\r\n      The <dfn>dfn element</dfn> indicates a definition.<br>\r\n      The <mark>mark element</mark> indicates a highlight.<br>\r\n      The <var>variable element</var>, such as <var>x</var> = <var>y</var>.<br>\r\n      The time element: <time datetime=\"2013-04-06T12:32+00:00\">2 weeks ago</time><br>\r\n    </div>\r\n    <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n  </article>\r\n</section>\r\n\r\n<section id=\"embedded\">\r\n  <h1>Embedded content</h1>\r\n  <article id=\"embedded__images\">\r\n    <h2>Images</h2>\r\n    <div>\r\n      <h3>No <code>&lt;figure&gt;</code> element</h3>\r\n      <p><a href=\"https://commons.wikimedia.org/wiki/File:Colouring_pencils.jpg\"><img src=\"https://raw.githubusercontent.com/dohliam/html5-sample-media/master/Colouring_pencils.jpg\" alt=\"Colouring pencils by MichaelMaggs\"></a></p>\r\n      <h3>Wrapped in a <code>&lt;figure&gt;</code> element, no <code>&lt;figcaption&gt;</code></h3>\r\n      <figure><a href=\"https://commons.wikimedia.org/wiki/File:Coloured,_textured_craft_card_edit.jpg\"><img src=\"https://raw.githubusercontent.com/dohliam/html5-sample-media/master/Coloured%2C_textured_craft_card_edit.jpg\" alt=\"Coloured, textured craft card by MichaelMaggs\"></a></figure>\r\n      <h3>Wrapped in a <code>&lt;figure&gt;</code> element, with a <code>&lt;figcaption&gt;</code></h3>\r\n      <figure>\r\n        <a href=\"https://commons.wikimedia.org/wiki/File:Opening_chess_position_from_black_side.jpg\"><img src=\"https://raw.githubusercontent.com/dohliam/html5-sample-media/master/Opening_chess_position_from_black_side.jpg\" alt=\"Opening chess position from black side by MichaelMaggs\"></a>\r\n        <figcaption>Here is a caption for this image.</figcaption>\r\n      </figure>\r\n    </div>\r\n    <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n  </article>\r\n  <article id=\"embedded__audio\">\r\n    <h2>Audio</h2>\r\n    <div>\r\n      <audio controls>\r\n        <source src=\"https://raw.githubusercontent.com/dohliam/html5-sample-media/master/Broke For Free - Night Owl.mp3\">\r\n      </audio>\r\n    </div>\r\n    <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n  </article>\r\n  <article id=\"embedded__video\">\r\n    <h2>Video</h2>\r\n    <div>\r\n      <video controls>\r\n        <source src=\"https://github.com/benhosmer/HTML5-Test-Videos/blob/master/big_buck_bunny.mp4?raw=true\" type=\"video/mp4\">\r\n        <source src=\"https://github.com/benhosmer/HTML5-Test-Videos/blob/master/big_buck_bunny.ogv?raw=true\" type=\"video/ogg\">\r\n      </video>\r\n    </div>\r\n    <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n  </article>\r\n  <article id=\"embedded__canvas\">\r\n    <h2>Canvas</h2>\r\n    <div><canvas>canvas</canvas></div>\r\n    <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n  </article>\r\n  <article id=\"embedded__meter\">\r\n    <h2>Meter</h2>\r\n    <div><meter value=\"2\" min=\"0\" max=\"10\">2 out of 10</meter></div>\r\n    <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n  </article>\r\n  <article id=\"embedded__progress\">\r\n    <h2>Progress</h2>\r\n    <div><progress>progress</progress></div>\r\n    <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n  </article>\r\n  <article id=\"embedded__svg\">\r\n    <h2>Inline SVG</h2>\r\n    <div><svg width=\"100px\" height=\"100px\"><circle cx=\"100\" cy=\"100\" r=\"100\" fill=\"#1fa3ec\"></circle></svg></div>\r\n    <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n  </article>\r\n  <article id=\"embedded__iframe\">\r\n    <h2>IFrame</h2>\r\n    <div><iframe src=\"index.html\" height=\"300\"></iframe></div>\r\n    <footer><p><a href=\"#top\">[Top]</a></p></footer>\r\n  </article>\r\n</section>\r\n<section id=\"forms\">\r\n  <h1>Form elements</h1>\r\n  <form>\r\n    <fieldset id=\"forms__input\">\r\n      <legend>Input fields</legend>\r\n      <p>\r\n        <label for=\"input__text\">Text Input</label>\r\n        <input id=\"input__text\" type=\"text\" placeholder=\"Text Input\">\r\n      </p>\r\n      <p>\r\n        <label for=\"input__password\">Password</label>\r\n        <input id=\"input__password\" type=\"password\" placeholder=\"Type your Password\">\r\n      </p>\r\n      <p>\r\n        <label for=\"input__webaddress\">Web Address</label>\r\n        <input id=\"input__webaddress\" type=\"url\" placeholder=\"http://yoursite.com\">\r\n      </p>\r\n      <p>\r\n        <label for=\"input__emailaddress\">Email Address</label>\r\n        <input id=\"input__emailaddress\" type=\"email\" placeholder=\"name@email.com\">\r\n      </p>\r\n      <p>\r\n        <label for=\"input__phone\">Phone Number</label>\r\n        <input id=\"input__phone\" type=\"tel\" placeholder=\"(999) 999-9999\">\r\n      </p>\r\n      <p>\r\n        <label for=\"input__search\">Search</label>\r\n        <input id=\"input__search\" type=\"search\" placeholder=\"Enter Search Term\">\r\n      </p>\r\n      <p>\r\n        <label for=\"input__text2\">Number Input</label>\r\n        <input id=\"input__text2\" type=\"number\" placeholder=\"Enter a Number\">\r\n      </p>\r\n      <p>\r\n        <label for=\"input__text3\" class=\"error\">Error</label>\r\n        <input id=\"input__text3\" class=\"is-error\" type=\"text\" placeholder=\"Text Input\">\r\n      </p>\r\n      <p>\r\n        <label for=\"input__text4\" class=\"valid\">Valid</label>\r\n        <input id=\"input__text4\" class=\"is-valid\" type=\"text\" placeholder=\"Text Input\">\r\n      </p>\r\n    </fieldset>\r\n    <p><a href=\"#top\">[Top]</a></p>\r\n    <fieldset id=\"forms__select\">\r\n      <legend>Select menus</legend>\r\n      <p>\r\n        <label for=\"select\">Select</label>\r\n        <select id=\"select\">\r\n          <optgroup label=\"Option Group\">\r\n            <option>Option One</option>\r\n            <option>Option Two</option>\r\n            <option>Option Three</option>\r\n          </optgroup>\r\n        </select>\r\n      </p>\r\n    </fieldset>\r\n    <p><a href=\"#top\">[Top]</a></p>\r\n    <fieldset id=\"forms__checkbox\">\r\n      <legend>Checkboxes</legend>\r\n      <ul class=\"list list--bare\">\r\n        <li><label for=\"checkbox1\"><input id=\"checkbox1\" name=\"checkbox\" type=\"checkbox\" checked=\"checked\"> Choice A</label></li>\r\n        <li><label for=\"checkbox2\"><input id=\"checkbox2\" name=\"checkbox\" type=\"checkbox\"> Choice B</label></li>\r\n        <li><label for=\"checkbox3\"><input id=\"checkbox3\" name=\"checkbox\" type=\"checkbox\"> Choice C</label></li>\r\n      </ul>\r\n    </fieldset>\r\n    <p><a href=\"#top\">[Top]</a></p>\r\n    <fieldset id=\"forms__radio\">\r\n      <legend>Radio buttons</legend>\r\n      <ul class=\"list list--bare\">\r\n        <li><label for=\"radio1\"><input id=\"radio1\" name=\"radio\" type=\"radio\" class=\"radio\" checked=\"checked\"> Option 1</label></li>\r\n        <li><label for=\"radio2\"><input id=\"radio2\" name=\"radio\" type=\"radio\" class=\"radio\"> Option 2</label></li>\r\n        <li><label for=\"radio3\"><input id=\"radio3\" name=\"radio\" type=\"radio\" class=\"radio\"> Option 3</label></li>\r\n      </ul>\r\n    </fieldset>\r\n    <p><a href=\"#top\">[Top]</a></p>\r\n    <fieldset id=\"forms__textareas\">\r\n      <legend>Textareas</legend>\r\n      <p>\r\n        <label for=\"textarea\">Textarea</label>\r\n        <textarea id=\"textarea\" rows=\"8\" cols=\"48\" placeholder=\"Enter your message here\"></textarea>\r\n      </p>\r\n    </fieldset>\r\n    <p><a href=\"#top\">[Top]</a></p>\r\n    <fieldset id=\"forms__html5\">\r\n      <legend>HTML5 inputs</legend>\r\n      <p>\r\n        <label for=\"ic\">Color input</label>\r\n        <input type=\"color\" id=\"ic\" value=\"#000000\">\r\n      </p>\r\n      <p>\r\n        <label for=\"in\">Number input</label>\r\n        <input type=\"number\" id=\"in\" min=\"0\" max=\"10\" value=\"5\">\r\n      </p>\r\n      <p>\r\n        <label for=\"ir\">Range input</label>\r\n        <input type=\"range\" id=\"ir\" value=\"10\">\r\n      </p>\r\n      <p>\r\n        <label for=\"idd\">Date input</label>\r\n        <input type=\"date\" id=\"idd\" value=\"1970-01-01\">\r\n      </p>\r\n      <p>\r\n        <label for=\"idm\">Month input</label>\r\n        <input type=\"month\" id=\"idm\" value=\"1970-01\">\r\n      </p>\r\n      <p>\r\n        <label for=\"idw\">Week input</label>\r\n        <input type=\"week\" id=\"idw\" value=\"1970-W01\">\r\n      </p>\r\n      <p>\r\n        <label for=\"idt\">Datetime input</label>\r\n        <input type=\"datetime\" id=\"idt\" value=\"1970-01-01T00:00:00Z\">\r\n      </p>\r\n      <p>\r\n        <label for=\"idtl\">Datetime-local input</label>\r\n        <input type=\"datetime-local\" id=\"idtl\" value=\"1970-01-01T00:00\">\r\n      </p>\r\n    </fieldset>\r\n    <p><a href=\"#top\">[Top]</a></p>\r\n    <fieldset id=\"forms__action\">\r\n      <legend>Action buttons</legend>\r\n      <p>\r\n        <input type=\"submit\" value=\"<input type=submit>\">\r\n        <input type=\"button\" value=\"<input type=button>\">\r\n        <input type=\"reset\" value=\"<input type=reset>\">\r\n        <input type=\"submit\" value=\"<input disabled>\" disabled>\r\n      </p>\r\n      <p>\r\n        <button type=\"submit\">&lt;button type=submit&gt;</button>\r\n        <button type=\"button\">&lt;button type=button&gt;</button>\r\n        <button type=\"reset\">&lt;button type=reset&gt;</button>\r\n        <button type=\"button\" disabled>&lt;button disabled&gt;</button>\r\n      </p>\r\n    </fieldset>\r\n    <p><a href=\"#top\">[Top]</a></p>\r\n  </form>\r\n</section>"
+          },
+          "SeoMetaPart": {
+            "PageTitle": null,
+            "Render": true,
+            "MetaDescription": "Description",
+            "MetaKeywords": "Keywords",
+            "Canonical": null,
+            "MetaRobots": null,
+            "CustomMetaTags": [],
+            "DefaultSocialImage": {
+              "Paths": [],
+              "MediaTexts": []
+            },
+            "OpenGraphImage": {
+              "Paths": [],
+              "MediaTexts": []
+            },
+            "OpenGraphType": null,
+            "OpenGraphTitle": null,
+            "OpenGraphDescription": null,
+            "TwitterImage": {
+              "Paths": [],
+              "MediaTexts": []
+            },
+            "TwitterTitle": null,
+            "TwitterDescription": null,
+            "TwitterCard": null,
+            "TwitterCreator": null,
+            "TwitterSite": null,
+            "GoogleSchema": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Queries",
+      "Queries": [
+        {
+          "Template": "select DocumentId\r\nfrom ContentItemIndex \r\nwhere Published = true and ContentType = @contenttype:'Page'",
+          "ReturnDocuments": true,
+          "Name": "Pages",
+          "Source": "Sql",
+          "Schema": null
+        }
+      ]
+    },
+    {
+      "name": "Roles",
+      "Roles": [
+        {
+          "Name": "Authenticated",
+          "Description": "Authenticated role",
+          "Permissions": [
+            "ViewContent"
+          ]
+        },
+        {
+          "Name": "Anonymous",
+          "Description": "Anonymous role",
+          "Permissions": [
+            "ViewContent"
+          ]
+        },
+        {
+          "Name": "Moderator",
+          "Description": "Moderator role",
+          "Permissions": [
+            "AccessAdminPanel",
+            "ManageOwnUserInformation"
+          ]
+        },
+        {
+          "Name": "Author",
+          "Description": "Author role",
+          "Permissions": [
+            "AccessAdminPanel",
+            "PublishOwnContent",
+            "EditOwnContent",
+            "DeleteOwnContent",
+            "PreviewOwnContent",
+            "CloneOwnContent",
+            "ManageOwnUserInformation",
+            "ManageOwnMediaContent"
+          ]
+        },
+        {
+          "Name": "Contributor",
+          "Description": "Contributor role",
+          "Permissions": [
+            "AccessAdminPanel",
+            "EditOwnContent",
+            "PreviewOwnContent",
+            "CloneOwnContent",
+            "ManageOwnUserInformation",
+            "ManageOwnMediaContent"
+          ]
+        },
+        {
+          "Name": "Editor",
+          "Description": "Editor role",
+          "Permissions": [
+            "AccessAdminPanel",
+            "PublishContent",
+            "EditContent",
+            "DeleteContent",
+            "PreviewContent",
+            "CloneContent",
+            "ListContent",
+            "ManageTemplates",
+            "ManageShortcodeTemplates",
+            "ManageOwnUserInformation",
+            "ManageMediaContent",
+            "ManageOwnMediaContent",
+            "ManageQueries",
+            "ManageSqlQueries"
+          ]
+        },
+        {
+          "Name": "Administrator",
+          "Description": "Administrator role",
+          "Permissions": [
+            "ManageSettings",
+            "AccessAdminPanel",
+            "ManageAdminSettings",
+            "PublishContent",
+            "EditContent",
+            "DeleteContent",
+            "PreviewContent",
+            "CloneContent",
+            "AccessContentApi",
+            "ListContent",
+            "ViewContentTypes",
+            "EditContentTypes",
+            "ManageTemplates",
+            "ManageAdminTemplates",
+            "SetHomepage",
+            "ManageShortcodeTemplates",
+            "ManageUsers",
+            "Import",
+            "Export",
+            "ManageRemoteInstances",
+            "ManageRemoteClients",
+            "ExportRemoteInstances",
+            "ManageLayers",
+            "ManageMediaFolder",
+            "ManageMediaProfiles",
+            "ViewMediaOptions",
+            "ManageMenu",
+            "ManageQueries",
+            "ManageRoles",
+            "SiteOwner",
+            "ManageSecurityHeadersSettings",
+            "ApplyTheme",
+            "EditContentOwner",
+            "View Users",
+            "ManageOwnUserInformation",
+            "ListUsers",
+            "EditUsers",
+            "DeleteUsers",
+            "AssignRoleToUsers",
+            "ManageFeatures",
+            "ManageSqlQueries"
+          ]
+        }
+      ]
+    }
+  ]
+}
