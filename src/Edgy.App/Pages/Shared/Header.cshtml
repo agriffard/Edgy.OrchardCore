@@ -3,9 +3,18 @@
     var app = Model;
 }
 <header role="banner">
-    <a href="/">@app.Name</a>
-    <nav role="navigation">
-        <partial name="Menu" model="app"></partial>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/">@app.Name</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots-vertical"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <partial name="Menu" model="app"></partial>
+                @* <partial name="MainMenu"></partial> *@
+            </div>
+        </div>
     </nav>
-    @* <partial name="MainMenu"></partial> *@
 </header>
+
+<partial name="ColorMode" model="app"></partial>

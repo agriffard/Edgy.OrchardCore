@@ -2,14 +2,14 @@
 @{
     var app = AppSettings.Value;
 }
-<!DOCTYPE html>
+<!DOCTYPE html class="h-100">
 <html>
 <head>
     <partial name="Head" model="app"></partial>
 </head>
-<body>
+<body class="d-flex flex-column h-100">
     <partial name="Header" model="app"></partial>
-    <main role="main">
+    <main role="main" class="flex-shrink-0">
         @RenderBody()
     </main>
     <partial name="Footer" model="app"></partial>

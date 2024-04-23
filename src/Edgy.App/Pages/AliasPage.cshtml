@@ -1,4 +1,4 @@
-@page "/a/{alias}"
+@page "/p/{alias}"
 @inject ContentService _contentService;
 @{
     var Model = await _contentService.GetPageByAliasAsync(Alias);
